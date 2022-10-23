@@ -1,0 +1,19 @@
+intentEvents:
+- intent: ContinueIntent
+  transitionToScene: actions.scene.END_CONVERSATION
+- intent: NewIntent
+  transitionToScene: StartNewBook
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        content:
+          card:
+            text: Card Content
+            title: Card Title
+        firstSimple:
+          variants:
+          - speech: 읽고 있는 책이 있으면 계속 읽기라고 말해주고, 없으면, 다른 책 읽기라고 말해주세요.
+        suggestions:
+        - title: 계속 읽기
+        - title: 다른 책 읽기

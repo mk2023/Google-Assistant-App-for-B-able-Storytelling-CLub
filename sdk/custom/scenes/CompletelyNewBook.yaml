@@ -1,0 +1,52 @@
+intentEvents:
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          content:
+            card:
+              text: Card Content
+              title: Card Title
+          firstSimple:
+            variants:
+            - speech: 특정한 장르 intent
+  intent: GenreIntent
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          content:
+            card:
+              text: Card Content
+              title: Card Title
+          firstSimple:
+            variants:
+            - speech: 새로운 업로드된 책 intent
+  intent: NewestUploadsIntent
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          content:
+            card:
+              text: Card Content
+              title: Card Title
+          firstSimple:
+            variants:
+            - speech: 인기책 intent
+  intent: PopularBooksIntent
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        content:
+          card:
+            text: Card Content
+            title: Card Title
+        firstSimple:
+          variants:
+          - speech: 최신 업로드된 책, 인기책, 아니면 특정한 장르 중 하나 택해주세요
+        suggestions:
+        - title: 최신 업로드된 책
+        - title: 인기책
+        - title: 특정한 장르

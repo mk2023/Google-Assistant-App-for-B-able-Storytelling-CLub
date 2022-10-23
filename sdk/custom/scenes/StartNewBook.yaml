@@ -1,0 +1,25 @@
+intentEvents:
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          content:
+            card:
+              text: Card Content
+              title: Card Title
+          firstSimple:
+            variants:
+            - speech: 읽었던 책 intent
+  intent: RereadIntent
+- intent: CompletelyNewIntent
+  transitionToScene: CompletelyNewBook
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: 한번 읽었던 책을 읽고 싶으세요? 아니면, 완전히 새로운 책을 읽고 싶으세요?
+        suggestions:
+        - title: 한번 읽었던 책
+        - title: 완전히 새로운 책
